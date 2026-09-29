@@ -23,6 +23,7 @@ const closeModal = (modal) => {
 const generateTodo = (data) => {
   const todo = new Todo(data, "#todo-template");
   const todoElement = todo.getView();
+  return todoElement;
   // const todoElement = todoTemplate.content
   // .querySelector(".todo")
   //     .cloneNode(true);
@@ -54,8 +55,6 @@ const generateTodo = (data) => {
   //   todoDeleteBtn.addEventListener("click", () => {
   //     todoElement.remove();
   //   });
-
-  return todoElement;
 };
 
 addTodoButton.addEventListener("click", () => {
