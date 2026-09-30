@@ -21,8 +21,8 @@ _setEventListeners(){
 
   this._formEl.addEventListener("submit", (evt) => {
     evt.preventDefault();
-  }),
-  this._setEventListeners(),
+  });
+  this._setEventListeners();
   }
 }
 
