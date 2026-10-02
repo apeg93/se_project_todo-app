@@ -1,4 +1,4 @@
-# Simple Todo App# Angel's Siimple Todo App
+## Angel's Siimple Todo App
 
 A lightweight to-do list app for keeping track of tasks and their due dates. Users can add tasks through a validated popup form, check them off as they finish them, and delete the ones they no longer need. The project was refactored from procedural JavaScript into object-oriented classes and ES modules.
 
