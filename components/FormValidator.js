@@ -9,12 +9,27 @@ class FormValidator {
     this._formEl = fromEl;
   }
 
-  checkInputValidity(inputElement) {
+  _checkInputValidity(inputElement) {
 
   }
 
-_setEventListeners(){
- this._inputList = Array.from(
+_setEventListeners() {
+  this._inputList = Array.from(
+    this._formEl.querySelectorAll(this._inputSelector),
+  );
+  const buttonElement = this._formEl.querySelector(
+    this._submitButtonSelector,
+  );
+
+  toggleButtonState(this._inputList, buttonElement, this._settings);
+
+  this._inputList.forEach((inputElement) => {
+    inputElement.addEventListener("input", () => {
+      this._checkInputValidity(inputElement);
+      toggleButtonState(this._inputList, buttonElement, this._settings);
+    });
+  });
+}
     
 
   enableValidation() {
@@ -24,6 +39,5 @@ _setEventListeners(){
   });
   this._setEventListeners();
   }
-}
 
 export default FormValidator;
